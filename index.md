@@ -1,0 +1,50 @@
+---
+title       : Enzyme kinetics in Shiny
+subtitle    : Simple Shiny app to show different types of enzyme inhibition
+author      : Vojtech Spiwok
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+# Enzyme inhibition
+
+Enzymes in human body convert one substrate (or substrates) to another. Many drugs act as inhibitors of various enzymes in body. Quantification of inhibitor effect and mechanism of action is key step of drug discovery focused on enzyme inhibitors.
+
+---
+
+# Types of enzyme inhibition
+
+Inhibitors can act either as covalent or noncovalent. We will show only noncovalent inhibitors. These could be further divided 
+into competitive, noncompetitive and uncompetitive.
+
+---
+
+# Competitive
+
+Competitive inhibitor binds to an enzyme and block it from binding of a substrate. High concentration of substrate may overcome the effect of inhibitor.
+
+# Noncompetitive
+
+Noncompetitive inhibitor binds to an enzyme with or without bound substrate. Substrate concentration therefor does not affect the degree of inhibition.
+
+# Uncompetitive
+
+Uncompetitive inhibitor binds only to an enzyme with bound substrate. Higher concentration of substrate thus increase the effect of inhibitor.
+
+---
+
+# App
+
+Here is example for noncompetitive inhibition and Ki set to 10:
+
+```r
+x <- 0:100; ninh <- x/(30+x); inh <- x/(30*(1+10/10)+x)
+plot(x, ninh, type="l", xlab="substrate conc.", ylab="rate"); lines(x, inh, col="red")
+```
+
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
