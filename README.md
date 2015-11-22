@@ -6,4 +6,4 @@ https://spiwokv.shinyapps.io/shiny
 
 Here come slides:
 
-
+https://github.com/spiwokv/enzymekineticsinshiny/blob/master/index.html
